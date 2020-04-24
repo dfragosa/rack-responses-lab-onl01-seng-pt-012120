@@ -7,7 +7,7 @@ require 'rack'
   end
   
   def greeting
-    (Time.now.to_i % 2).zero? ? ["<em>Good Morning</em>"] : ["<em>Good Afternoon</em>"]
+    Time.now.hour < 12 ? ["<em>Good Morning</em>"] : ["<em>Good Afternoon</em>"]
   end
 end
 
